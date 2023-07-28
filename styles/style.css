@@ -1,3 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital@0;1&family=Montserrat:wght@100;200;300&family=Work+Sans:wght@400;500;800&display=swap');
+
+
 body {
     background-color: #1D1D20;
+    color: #CCCCCC;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+nav {
+
+
+}
+
+nav ul li{
+    display: inline-block;
+    padding: 0 25px;
+    font-size: 22px;
+    text-decoration: none;
+
+}
+
+.selected-nav-link {
+    display: inline-block;
+    padding: 0 25px;
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.welcome-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 120px;
+
+
+}
+
+.welcome-page img {
+    width: 15%;
+    height: auto;
+    margin-left: 30px;
+    border-radius: 20px;
+
+
+}
+
+.welcome-text {
+    width: 30%;
+    margin-right: 80px;
+
+
+}
+
+.welcome-text h1 {
+    font-size: 70px;
+}
+
+.welcome-text p {
+    font-size: 26px;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 20px;
+}
+
+
+.welcome-text p::before {
+    content: ""; /* Required to create the pseudo-element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 4px; /* Adjust the width of the line as needed */
+    background-color: #CCCCCC; /* Set the color of the line */
 }
