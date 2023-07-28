@@ -42,7 +42,8 @@ nav ul li{
     display: inline-block;
     padding: 0 25px;
     font-size: 22px;
-    text-decoration: underline;
+    border-bottom: 2px solid currentColor;
+    border-bottom-width: thin;
 }
 
 .welcome-page {
@@ -90,4 +91,50 @@ nav ul li{
     height: 100%;
     width: 4px; /* Adjust the width of the line as needed */
     background-color: #CCCCCC; /* Set the color of the line */
+}
+
+.my-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 400px;
+    margin-left: 40px;
+}
+
+.my-projects ul {
+    margin-top: 70px;
+}
+
+.my-projects ul li {
+    padding: 10px;
+}
+
+.my-projects ul li a{
+
+    text-decoration: none;
+    color: #CCCCCC;
+}
+
+.my-projects ul li a:hover {
+    color: white;
+
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 400px;
+}
+
+.contact-info li {
+    display: inline-block;
+    width: 70px; /* Set the desired width for the images */
+    height: auto; /* Set the desired height for the images */
+    margin: 30px; /* Optional: Add some spacing between the images */
+}
+
+.contact-info img {
+    width: 100%;
+    height: 100%;
+
 }

@@ -14,6 +14,27 @@ let aboutMePage = '<div class="welcome-page">\n' +
     '            <img src="images/profile_photo.jpg" alt="profile_photo.jpg">\n' +
     '        </div>';
 
+let myProjectsPage = '<div class="my-projects">\n' +
+    '                           <h1>Projects that I have done:</h1>' +
+    '                           <ul>' +
+    '                             <li><a href="https://github.com/ptrckgaf/IFJ-22-project" target="_blank">IFJ-22-project</a></li>' +
+    '                             <li><a href="https://github.com/ptrckgaf/IIS-22-project" target="_blank">IIS-22-project</a></li>' +
+    '                             <li><a href="https://github.com/ptrckgaf/IPP-23-project" target="_blank">IPP-23-project</a></li>' +
+    '                          </ul>' +
+    '                        </div>';
+
+let contactPage = '<div class="contact-info">\n' +
+    '                       <ul>' +
+    '                         <li>' +
+    '                            <a href="https://www.linkedin.com/in/patrik-g%C3%A1frik-71206823b/" target="_blank"><img src="images/LI-In-Bug.png" alt="linkedin"></a>' +
+    '                         </li>' +
+    '                         <li>' +
+    '                            <a href="https://github.com/ptrckgaf" target="_blank"><img src="images/github-mark-white.png" alt="github"></a>' +
+    '                         </li>' +
+    '                         <li>' +
+    '                            <a href="mailto:gafrik.patrik@gmail.com" target="_blank"><img src="images/Gmail_Logo_512px.png" alt="gmail"></a>' +
+    '                         </li>' +
+    '                       </ul>';
 
 
 
@@ -35,6 +56,8 @@ const navigateToMyProjects = () => {
         aboutMeButton.classList.remove("selected-nav-link");
         contactButton.classList.remove("selected-nav-link");
     }
+
+    mainContent.innerHTML = myProjectsPage;
 }
 
 const navigateToContact = () => {
@@ -44,6 +67,8 @@ const navigateToContact = () => {
         aboutMeButton.classList.remove("selected-nav-link");
         myProjectsButton.classList.remove("selected-nav-link");
     }
+
+    mainContent.innerHTML = contactPage;
 }
 
 aboutMeButton.onmouseover = function () {
