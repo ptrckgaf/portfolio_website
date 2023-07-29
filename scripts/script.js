@@ -11,7 +11,7 @@ let isSK = false;
 let aboutMePage = '<div class="welcome-page">\n' +
     '            <div class="welcome-text">\n' +
     '                <h1>Hello,</h1>\n' +
-    '                <p>My name is Patrik Gáfrik. I am a computer science student at Brno University of Technology.\n' +
+    '                <p>My name is <b>Patrik Gáfrik</b>. I am a computer science student at Brno University of Technology.\n' +
     '                    I am primarily interested in full-stack web development. I have experience with developing web applications\n' +
     '                    using React. I enjoy working in team and discussing optimal solutions for problems.</p>\n' +
     '            </div>\n' +
@@ -23,7 +23,7 @@ let aboutMePage = '<div class="welcome-page">\n' +
 let aboutMePageSK = '<div class="welcome-page">\n' +
     '            <div class="welcome-text">\n' +
     '                <h1>Ahoj,</h1>\n' +
-    '                <p>Volám sa Patrik Gáfrik. Som študent informačných technológií na VUT v Brne. Zaujímam sa hlavne o full-stack web development. Mám skúsenosti s vytváraním ' +
+    '                <p>Volám sa <b>Patrik Gáfrik</b>. Som študent informačných technológií na VUT v Brne. Zaujímam sa hlavne o full-stack web development. Mám skúsenosti s vytváraním ' +
     'webových aplikácií vo frameworku React. Rád pracujem v tíme a diskutujem o vhodných riešeniach problémov.</p>\n' +
     '            </div>\n' +
     '\n' +
