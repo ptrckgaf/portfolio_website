@@ -1,7 +1,12 @@
-let aboutMeButton = document.getElementById('about-me');
-let myProjectsButton = document.getElementById('my-projects');
-let contactButton = document.getElementById('contact');
+let aboutMeButton = document.getElementsByClassName('about-me-link')[0];
+let myProjectsButton = document.getElementsByClassName('my-projects-link')[0];
+let contactButton = document.getElementsByClassName('contact-link')[0];
 let mainContent = document.getElementsByTagName('main')[0];
+let enLanguageButton = document.getElementById('en-btn');
+let skLanguageButton = document.getElementById('sk-btn');
+let isEN = true;
+let isSK = false;
+
 
 let aboutMePage = '<div class="welcome-page">\n' +
     '            <div class="welcome-text">\n' +
@@ -14,8 +19,28 @@ let aboutMePage = '<div class="welcome-page">\n' +
     '            <img src="images/profile_photo.jpg" alt="profile_photo.jpg">\n' +
     '        </div>';
 
+
+let aboutMePageSK = '<div class="welcome-page">\n' +
+    '            <div class="welcome-text">\n' +
+    '                <h1>Ahoj,</h1>\n' +
+    '                <p>Volám sa Patrik Gáfrik. Som študent informačných technológií na VUT v Brne. Zaujímam sa hlavne o full-stack web development. Mám skúsenosti s vytváraním ' +
+    'webových aplikácií vo frameworku React. Rád pracujem v tíme a diskutujem o vhodných riešeniach problémov.</p>\n' +
+    '            </div>\n' +
+    '\n' +
+    '            <img src="images/profile_photo.jpg" alt="profile_photo.jpg">\n' +
+    '        </div>';
+
 let myProjectsPage = '<div class="my-projects">\n' +
     '                           <h1>Projects that I have done:</h1>' +
+    '                           <ul>' +
+    '                             <li><a href="https://github.com/ptrckgaf/IFJ-22-project" target="_blank">IFJ-22-project</a></li>' +
+    '                             <li><a href="https://github.com/ptrckgaf/IIS-22-project" target="_blank">IIS-22-project</a></li>' +
+    '                             <li><a href="https://github.com/ptrckgaf/IPP-23-project" target="_blank">IPP-23-project</a></li>' +
+    '                          </ul>' +
+    '                        </div>';
+
+let myProjectsPageSK = '<div class="my-projects">\n' +
+    '                           <h1>Projekty na ktorých som pracoval:</h1>' +
     '                           <ul>' +
     '                             <li><a href="https://github.com/ptrckgaf/IFJ-22-project" target="_blank">IFJ-22-project</a></li>' +
     '                             <li><a href="https://github.com/ptrckgaf/IIS-22-project" target="_blank">IIS-22-project</a></li>' +
@@ -46,7 +71,13 @@ const navigateToAboutMe = () => {
         contactButton.classList.remove("selected-nav-link");
     }
 
-    mainContent.innerHTML = aboutMePage;
+    if (isSK) {
+        mainContent.innerHTML = aboutMePageSK;
+    }
+    if (isEN) {
+        mainContent.innerHTML = aboutMePage;
+    }
+
 }
 
 const navigateToMyProjects = () => {
@@ -57,7 +88,14 @@ const navigateToMyProjects = () => {
         contactButton.classList.remove("selected-nav-link");
     }
 
-    mainContent.innerHTML = myProjectsPage;
+    if (isSK) {
+        mainContent.innerHTML = myProjectsPageSK;
+    }
+    if (isEN) {
+        mainContent.innerHTML = myProjectsPage;
+    }
+
+
 }
 
 const navigateToContact = () => {
@@ -70,6 +108,52 @@ const navigateToContact = () => {
 
     mainContent.innerHTML = contactPage;
 }
+
+const changeLanguage = (lang) => {
+    if (lang === 'sk') {
+        aboutMeButton.innerHTML = 'O mne';
+        myProjectsButton.innerHTML = 'Moje projekty';
+        contactButton.innerHTML = 'Kontakt';
+        if (aboutMeButton.classList.contains('selected-nav-link')) {
+            mainContent.innerHTML = aboutMePageSK;
+        }
+        if (myProjectsButton.classList.contains('selected-nav-link')) {
+            mainContent.innerHTML = myProjectsPageSK;
+        }
+
+        isSK = true;
+        isEN = false;
+
+    }
+    if (lang === 'en') {
+        aboutMeButton.innerHTML = 'About Me';
+        myProjectsButton.innerHTML = 'My Projects';
+        contactButton.innerHTML = 'Contact';
+        if (aboutMeButton.classList.contains('selected-nav-link')) {
+            mainContent.innerHTML = aboutMePage;
+        }
+        if (myProjectsButton.classList.contains('selected-nav-link')) {
+            mainContent.innerHTML = myProjectsPage;
+        }
+        isSK = false;
+        isEN = true;
+
+    }
+
+}
+skLanguageButton.addEventListener('click', () => {
+    skLanguageButton.classList.add('active');
+    enLanguageButton.classList.remove('active');
+});
+
+enLanguageButton.addEventListener('click', () => {
+    enLanguageButton.classList.add('active');
+    skLanguageButton.classList.remove('active');
+});
+skLanguageButton.addEventListener('click', () => changeLanguage('sk'));
+enLanguageButton.addEventListener('click', () => changeLanguage('en'));
+
+
 
 aboutMeButton.onmouseover = function () {
     aboutMeButton.style.color = 'white';
