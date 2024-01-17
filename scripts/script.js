@@ -42,7 +42,7 @@ let myProjectsPage = '<div class="my-projects">\n' +
 let myProjectsPageSK = '<div class="my-projects">\n' +
     '                           <h1>Projekty na ktorých som pracoval:</h1>' +
     '                           <ul>' +
-    '                             <li><a href="https://github.com/ptrckgaf/IFJ-22-project" target="_blank">IFJ-22-project</a></li>' +
+    '                             <li><a class="github-link" href="https://github.com/ptrckgaf/IFJ-22-project" target="_blank">IFJ-22-project</a></li>' +
     '                             <li><a href="https://github.com/ptrckgaf/IIS-22-project" target="_blank">IIS-22-project</a></li>' +
     '                             <li><a href="https://github.com/ptrckgaf/IPP-23-project" target="_blank">IPP-23-project</a></li>' +
     '                          </ul>' +
